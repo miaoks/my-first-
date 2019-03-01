@@ -1,0 +1,87 @@
+﻿
+数据库的组成
+1.一个数据库系统管理着多个数据库
+
+2.一个数据库中可以存放多张表
+
+3.每张表都有字段(比如姓名, 年龄)
+
+4.表中会有一个特殊的字段(主键), 用于保证数据的唯一性
+
+MySQL的管理系统: phpMyAdmin
+
+通过代码操作数据库, 使用SQL(structure query language, 结构化查询语言)
+CURD
+1.增(insert)
+
+2.删(delete)
+
+3.改(update)
+
+4.查(select)
+注: SQL语句中的关键词, 不区分大小写
+
+1.系统关键字不区分大小写，但是建议使用大写(自己定义的区分)
+
+1.插入：
+INSERT INTO user VALUES(NULL,”石头”,”男”,20,’1223223’);
+
+//方式2：常用
+INSERT INTO user(name,sex) VALUES(‘小花’,’女’);
+INSERT INTO user(name,tel) VALUES(‘小朱’,’女’);
+//多行插入
+INSERT INTO user (userName,password) VALUES("张三","123"),("张五","123")
+
+
+2.更新
+UPDATE user SET age = 20, sex = ‘男’ where id = 3;
+
+3.查询
+SELECT * FROM user
+
+SELECT * FROM use where id = 1;
+
+SELECT * FROM user where id > 
+
+3
+//id不等于
+SELECT * FROM user where id <>
+ 3
+//多条件
+SE
+LECT * FROM user where id > 
+2 AND id < 4
+//模糊查询  %代表统配
+SELECT * FROM user where name  LIKE ‘小%’;
+//差字段
+SELECT name,sex FROM user WHERE id = 1;
+//差个数
+SELECT count(*) FROM user；
+//修改字段名
+SELECT count(*) AS count FROM user；
+//查找最大ID
+SELECT MAX(id) AS max FROM user;
+//
+排序
+//升序默认
+SELECT * FROM user ORDER BY id ASC;
+//降序
+SELECT * FROM user ORDER BY id DESC;
+
+//限制
+SELECT * FROM user LIMIT 2;
+//先降序，后限制
+SELECT * FROM user ORDER BY id DESC LIMIT 2;
+
+//限制扩展:第一个下标，从0开始，第二个是长度
+SELECT * FROM user LIMIT 2,
+
+2;
+
+//删除
+DELETE FROM user：数据所有删除
+DELETE FROM user where id = 5;
+
+六.删除表
+drop table 表名
+例如: drop table cat
