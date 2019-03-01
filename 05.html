@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    body {
+	    	background-color:black;
+            /*transform-style: preserve-3d;*/
+	    	/*perspective: 2000px;*/
+
+	    }
+		.wrap {
+			width: 100px;
+			height: 150px;
+			margin: 100px auto 0;
+			position: relative;
+			border: 3PX solid yellow;
+            transform-style: preserve-3d;
+	    	/*transform: rotateX(-10deg);*/
+	    	animation:donghua 2s;
+	    	animation-iteration-count: infinite;
+	    	animation-timing-function: linear;
+		}
+		@keyframes donghua {
+		    0%{
+				transform:rotateX(-30deg) rotateY(0deg) rotateZ(-30deg);
+			}
+			50%{
+				transform:rotateX(30deg) rotateY(180deg)rotateZ(0deg);
+			}
+
+			100%{
+				transform:rotateX(-30deg) rotateY(360deg)rotateZ(-30deg);
+			}
+
+		}
+		.wrap div {
+			width: 100px;
+			height: 150px;
+			background: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			line-height: 200px;
+			border: 2PX solid red;
+			-webkit-box-reflect: below 10px -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1))		}
+		.wrap div:nth-child(1) {
+			transform: translateZ(400px);
+		}
+		.wrap div:nth-child(2) {
+			transform: rotateY(30deg) translateZ(400px);
+		}
+		.wrap div:nth-child(3) {
+			transform: rotateY(60deg) translateZ(400px);
+		}
+		.wrap div:nth-child(4) {
+			transform: rotateY(90deg) translateZ(400px);
+		}
+		.wrap div:nth-child(5) {
+			transform: rotateY(120deg) translateZ(400px);
+		}
+		.wrap div:nth-child(6) {
+			transform: rotateY(150deg) translateZ(400px);
+		}
+		.wrap div:nth-child(7) {
+			transform: rotateY(180deg) translateZ(400px);
+		}
+		.wrap div:nth-child(8) {
+			transform: rotateY(210deg) translateZ(400px);
+		}
+		.wrap div:nth-child(9) {
+			transform: rotateY(240deg) translateZ(400px);
+		}
+		.wrap div:nth-child(10) {
+			transform: rotateY(270deg) translateZ(400px);
+		}
+		.wrap div:nth-child(11) {
+			transform: rotateY(300deg) translateZ(400px);
+		}
+		.wrap div:nth-child(12) {
+			transform: rotateY(330deg) translateZ(400px);
+		}
+	</style>
+</head>
+<body>Y
+	<div class="wrap">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+	</div>
+	
+</body>
+	<script></script>
+
+</html>
